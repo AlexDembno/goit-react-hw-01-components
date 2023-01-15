@@ -1,4 +1,5 @@
 import './profile.css';
+import PropTypes from 'prop-types';
 
 function Profile({ username, tag, location, avatar, stats }) {
   const keysStats = Object.keys(stats);
@@ -30,3 +31,15 @@ function Profile({ username, tag, location, avatar, stats }) {
 }
 
 export default Profile;
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};
