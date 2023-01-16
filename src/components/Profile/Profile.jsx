@@ -32,6 +32,7 @@ function Profile({ username, tag, location, avatar, stats }) {
 
 export default Profile;
 
+
 Profile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
